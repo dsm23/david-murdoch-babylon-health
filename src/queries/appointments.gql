@@ -1,0 +1,6 @@
+mutation POST_APPOINTMENT($input: Data) { 
+  addAppointment(input: $input)
+    @rest(type: "newAppointment", path: "/appointments", method: "POST", bodyKey: input) {
+      NoResponse
+  }
+}

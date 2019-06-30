@@ -1,0 +1,8 @@
+query GET_AVAILABLE_SLOTS {
+  slots @rest(type: "[Slots]", path: "/availableSlots") {
+    id
+    consultantType
+    appointmentType
+    time
+  }
+}

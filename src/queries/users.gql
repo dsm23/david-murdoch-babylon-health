@@ -1,0 +1,10 @@
+query GET_USER($userId: Int) {
+  user(userId: $userId)
+    @rest(type: "Users", path: "/users/{args.userId}") {
+    id
+    firstName
+    lastName
+    avatar
+    dateOfBirth
+  }
+}

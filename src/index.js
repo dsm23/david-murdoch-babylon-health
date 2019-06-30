@@ -1,9 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import 'normalize.css'
+import React from 'react';
+import { render } from 'react-dom';
+import 'normalize.css';
 
-import App from './App'
-import registerServiceWorker from './registerServiceWorker'
+import AppProviders from 'components/app-providers';
 
-ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+
+render(
+  <AppProviders>
+    <App />
+  </AppProviders>,
+  document.getElementById('root'),
+);
+registerServiceWorker();

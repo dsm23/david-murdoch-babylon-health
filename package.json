@@ -6,7 +6,7 @@
     "node": ">=10.13"
   },
   "scripts": {
-    "start": "yarn server & react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "precommit": "lint-staged",
@@ -14,23 +14,39 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --single-quote --trailing-comma es5 --no-semi --write",
+      "prettier --write src/**/*.{js,jsx}",
       "eslint --quiet",
       "git add"
     ]
   },
   "dependencies": {
+    "@material-ui/core": "^4.1.3",
+    "@material-ui/icons": "^4.2.1",
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.3",
+    "apollo-link": "^1.2.12",
+    "apollo-link-rest": "^0.7.3",
+    "final-form": "^4.16.1",
+    "final-form-material-ui": "^0.3.0",
+    "graphql": "^14.4.1",
+    "graphql-anywhere": "^4.2.4",
+    "graphql.macro": "^1.4.2",
     "json-server": "^0.14.0",
-    "node-sass": "^4.10.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "qs": "^6.7.0",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.6",
+    "react-final-form": "^6.3.0",
+    "react-scripts": "^3.0.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "husky": "^1.3.1",
-    "lint-staged": "^8.1.5",
-    "react-scripts": "^2.1.1"
+    "lint-staged": "^8.1.5"
   },
   "browserslist": [
     ">0.2%",
